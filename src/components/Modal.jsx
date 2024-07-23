@@ -35,7 +35,7 @@ function ModalComp(props, ref) {
           >
             {text.heading}
           </p>
-          <p className="">{text.info}</p>
+          {text.info && <p className="">{text.info}</p>}
         </div>
         {/* {!isImposter ? (
           <div>

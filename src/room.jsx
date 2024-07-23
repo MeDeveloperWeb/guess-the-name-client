@@ -102,6 +102,11 @@ export default function Room() {
 
     function startMeeting() {
       setLobby((prev) => ({ ...prev, inMeeting: true }));
+
+      modalRef.current.showModal({
+        heading: 'Voting Starts',
+        info: 'Click on any player to select. And the click on vote button to vote.'
+      });
     }
 
     function endMeeting(result) {
