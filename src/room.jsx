@@ -110,7 +110,12 @@ export default function Room() {
     }
 
     function endMeeting(result) {
-      setLobby((prev) => ({ ...prev, inMeeting: false, ongoing: false }));
+      setLobby((prev) => ({
+        ...prev,
+        inMeeting: false,
+        ongoing: false,
+        isImposter: false
+      }));
 
       modalRef.current?.showModal(
         getResultDescription(result, players, lobby.isImposter)
